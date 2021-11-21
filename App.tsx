@@ -20,7 +20,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 export type RootStackParams = {
   ExploreStack;
-  RestaurantsStack: RestaurantsStackParams | undefined;
+  RestaurantsStack: RestaurantsStackParams;
   Profile;
   Restaurant: {
     name: string;
