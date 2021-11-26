@@ -4,6 +4,7 @@ import RestaurantCard from '../components/RestaurantCard';
 import Menu from '../components/Menu';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParams} from '../App';
+import TopNavigation from '../components/TopNavigation';
 
 type Props = NativeStackScreenProps<RootStackParams, 'ExploreStack'>;
 
