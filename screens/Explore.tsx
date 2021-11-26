@@ -3,14 +3,16 @@ import {View, Text, StyleSheet} from 'react-native';
 import RestaurantCard from '../components/RestaurantCard';
 import Menu from '../components/Menu';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParams} from '../App';
-import TopNavigation from '../components/TopNavigation';
+import {RootStackParams} from '../AppTabNavigator';
+import TopNavigation from '../components/TopBackNavigation';
+import TopDrawerNavigation from '../components/TopDrawerNavigation';
 
 type Props = NativeStackScreenProps<RootStackParams, 'ExploreStack'>;
 
 const ExploreScreen = ({navigation}: Props) => {
   return (
     <View style={styles.container}>
+      <TopDrawerNavigation />
       <Text style={styles.screenTitle}>Restaurants</Text>
       <View>
         <Text style={styles.sectionTitle}>Restaurants Near You</Text>

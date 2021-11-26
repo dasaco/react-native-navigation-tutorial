@@ -69,28 +69,26 @@ const App = () => {
   return (
     <NavigationContainer>
       <RootStack.Navigator initialRouteName="ExploreStack" screenOptions={({ route }) => ({
-        tabBarIcon: ({ color, size }) => {
-          if (route.name === 'ExploreStack') {
-            return <ExploreIcon color={color} size={size} />
-          } else if (route.name === 'RestaurantsStack') {
-            return <RestaurantIcon color={color} size={size} />
-          } else if (route.name === "Profile") {
-            return <ProfileIcon color={color} size={size} />
-          }
-
-          // You can return any component that you like here!
-          return null
-        },
         headerShown: false,
         tabBarActiveTintColor: '#e67a15',
         tabBarInactiveTintColor: 'gray',
       })}>
-        <RootStack.Screen name="ExploreStack" component={ExploreScreenStack} />
+        <RootStack.Screen name="ExploreStack" component={ExploreScreenStack} options={{
+          tabBarIcon: ({ color, size }) => <ExploreIcon color={color} size={size} />,
+          tabBarLabel: "Explore"
+        }} />
         <RootStack.Screen
           name="RestaurantsStack"
           component={RestaurantScreenStack}
+          options={{
+            tabBarIcon: ({ color, size }) => <RestaurantIcon color={color} size={size} />,
+            tabBarLabel: "Restaurants"
+          }}
         />
-        <RootStack.Screen name="Profile" component={ProfileScreen} />
+        <RootStack.Screen name="Profile" component={ProfileScreen} options={{
+          tabBarIcon: ({ color, size }) => <ProfileIcon color={color} size={size} />,
+          tabBarLabel: "Profile"
+        }} />
       </RootStack.Navigator>
     </NavigationContainer>
   );

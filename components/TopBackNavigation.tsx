@@ -4,7 +4,7 @@ import { TouchableHighlight } from 'react-native-gesture-handler'
 import BackIcon from '../icons/BackIcon'
 import { useNavigation } from '@react-navigation/core'
 
-const TopNavigation = () => {
+const TopBackNavigation = () => {
   const navigation = useNavigation()
 
   return <View style={styles.container}>
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default TopNavigation
+export default TopBackNavigation

@@ -3,14 +3,15 @@ import React from 'react';
 import RestaurantCard from '../components/RestaurantCard';
 import Menu from '../components/Menu';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
-import {RootStackParams} from '../App';
-import TopNavigation from '../components/TopNavigation';
+import {RootStackParams} from '../AppTabNavigator';
+import TopDrawerNavigation from '../components/TopDrawerNavigation';
 
 type Props = NativeStackScreenProps<RootStackParams, 'RestaurantsStack'>;
 
 const RestaurantsScreen = ({navigation}: Props) => {
   return (
     <View style={styles.container}>
+      <TopDrawerNavigation />
       <Text style={styles.screenTitle}>Restaurants Screen</Text>
       <ScrollView>
         <RestaurantCard
